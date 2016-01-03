@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    int height = -1;
-    
-    while (height < 0 || height > 23)
+    int height;
+    do
     {
         printf("height: ");
         height = GetInt();
     }
+    while (height < 0 || height > 23);
     
     for (int row = 0; row < height; row++)
     {

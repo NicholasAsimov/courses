@@ -4,13 +4,13 @@
 
 int main(void)
 {
-    float dollars = -1.0;
-
-    while (dollars < 0.0)
+    float dollars;
+    do
     {
         printf("O hai! How much change is owed?\n");
         dollars = GetFloat();
     }
+    while (dollars < 0.0);
     
     int cents = round(dollars * 100);
     int coins = 0;
