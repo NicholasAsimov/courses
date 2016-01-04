@@ -15,6 +15,7 @@ Usage: The program reads numerical key from a command-line argument,
 
 int main(int argc, string argv[])
 {
+    // Making sure there's only 2 arguments (program name and key)
     if (argc != 2)
     {
         printf("Usage: %s key\n", argv[0]);
@@ -24,8 +25,11 @@ int main(int argc, string argv[])
     int k = atoi(argv[1]);
     string p = GetString();
     
+    // Cycling through each character in text
     for (int i = 0, n = strlen(p); i < n; i++)
     {
+        // Checking what the current character to encrypt is
+        // (uppercased, lowercased or not alphabetical)
         if (isalpha(p[i]) && isupper(p[i]))
         {
             printf("%c", ((p[i] - 'A' + k) % 26) + 'A');

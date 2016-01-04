@@ -16,10 +16,11 @@ Usage: The program asks user for an input and prints out uppercase letters
 int main(void)
 {
     string name = GetString();
-    printf("%c", toupper(name[0]));
+    printf("%c", toupper(name[0])); // Print first character
     
     for (int i = 0, n = strlen(name); i < n; i++)
     {
+        // If the current character is space - print next character
         if (name[i] == ' ')
         {
             printf("%c", toupper(name[i+1]));

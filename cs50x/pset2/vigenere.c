@@ -42,8 +42,12 @@ int main(int argc, string argv[])
     // kch = key character for current iteration
     for (int i = 0, n = strlen(p), kn = strlen(k), ki = 0; i < n; i++)
     {
-        int kch = k[ki % kn] - 'a';
+        // Calculating key character for current iteration and
+        // making sure it lowercased
+        int kch = tolower(k[ki % kn]) - 'a';
         
+        // Checking what the current character to encrypt is
+        // (uppercased, lowercased or not alphabetical)
         if (isalpha(p[i]) && isupper(p[i]))
         {
             printf("%c", ((p[i] - 'A' + kch) % 26) + 'A');
