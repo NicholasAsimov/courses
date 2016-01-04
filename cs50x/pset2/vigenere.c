@@ -37,9 +37,9 @@ int main(int argc, string argv[])
     string p = GetString(); // Text to encrypt
     
     // Initializing loop to cycle through key word
-    // ki = iterator for key
-    // kn = length of key
-    // kch = key character for current iteration
+    // ki - iterator for key
+    // kn - length of key
+    // kch - key character for current iteration
     for (int i = 0, n = strlen(p), kn = strlen(k), ki = 0; i < n; i++)
     {
         // Calculating key character for current iteration and
