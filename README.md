@@ -13,3 +13,4 @@ This repository holds the homework assignments being written as part of differen
   * caesar.c - encrypts a message using caesar cipher with given key.
   * vigenere.c - encrypts a message using vigenere cipher with given key.
 * Problem Set 3
+  * generate.c
