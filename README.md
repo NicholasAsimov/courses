@@ -14,3 +14,6 @@ This repository holds the homework assignments being written as part of differen
   * vigenere.c - encrypts a message using vigenere cipher with given key.
 * Problem Set 3
   * generate.c -
+## [6.00.1x](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-6)
+* Problem Set 1
+  * -update later-
