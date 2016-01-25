@@ -1,0 +1,9 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. From 3x3 upto 9x9 board
+1. 2-dimensional array
+2. function is called 'greet'
+3. I need to implement functions init, draw, move, won
