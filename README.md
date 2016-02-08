@@ -1,6 +1,6 @@
 # courses
 
-This repository holds the homework assignments being written as part of different online courses.
+This repository holds the homework assignments being written as a part of different online courses.
 
 *Problem sets are uploaded after the deadline so it doesn't violate Honor Code.*
 
