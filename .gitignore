@@ -42,3 +42,4 @@
 
 # Debug files
 *.dSYM/
+.project
