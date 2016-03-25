@@ -120,7 +120,7 @@ class Patient(object):
         Gets the size of the current total virus population.
         returns: The total virus population (an integer)
         """
-        return len(self.getViruses())timestep
+        return len(self.getViruses())
 
     def update(self):
         """
@@ -184,21 +184,31 @@ def simulationWithoutDrug(numViruses, maxPop, maxBirthProb, clearProb,
     virus_population = []
     average_population = []
 
-    for trial in range(numTrials):
-        viruses = [SimpleVirus(maxBirthProb, clearProb) for n in range(numViruses)]
-        test_patient = Patient(viruses, maxPop)
-        virus_population.append([])
+    # for trial in range(numTrials):
+    #     viruses = [SimpleVirus(maxBirthProb, clearProb) for n in range(numViruses)]
+    #     test_patient = Patient(viruses, maxPop)
+    #     virus_population.append([])
+    #
+    #     for timestep in range(300):
+    #         test_patient.update()
+    #         virus_population[trial].append(test_patient.getTotalPop())
+    #
+    # for element in virus_population:
+    #     average_population.append(sum(element) / numTrials)
 
-        for timestep in range(300):
-            test_patient.update()
-            virus_population[trial].append(test_patient.getTotalPop())
+    viruses = [SimpleVirus(maxBirthProb, clearProb) for n in range(numViruses)]
+    test_patient = Patient(viruses, maxPop)
 
-        for element in virus_population:
-            average_population.append(sum(element) / numTrials)
+    for timestep in range(300):
+        test_patient.update()
+        virus_population.append(test_patient.getTotalPop())
 
-    pylab
+    # print virus_population
+    pylab.plot(virus_population)
+    pylab.show()
 
-simulationWithoutDrug(100, 1000, 0.1, 0.05, 100)
+
+simulationWithoutDrug(10, 1000, 0.1, 0.05, 100)
 
 #
 # PROBLEM 4
